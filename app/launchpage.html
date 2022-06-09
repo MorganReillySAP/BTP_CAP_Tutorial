@@ -10,7 +10,7 @@
             height: 100%;
         }
     </style>
-    <script
+    <!-- <script
         id="sap-ui-bootstrap"
         src="https://sapui5.hana.ondemand.com/1.102.1/resources/sap-ui-core.js"
         data-sap-ui-theme="sap_fiori_3"
@@ -21,7 +21,30 @@
         data-sap-ui-compatVersion="edge"
         data-sap-ui-async="true"
         data-sap-ui-frameOptions="trusted"
-    ></script>
+    ></script> -->
+    <script>
+        window["sap-ushell-config"] = {
+            defaultRenderer: "fiori3",
+            applications: {
+                "risks-app": {
+                    title: "Risks",
+                    description: "Risks",
+                    additionalInformation: "SAPUI5.Component=ns.risks",
+                    applicationType: "URL",
+                    url: "./risks/webapp",
+                    navigationMode: "embedded"
+                },
+                "mitigations-app": {
+                    title: "Mitigations",
+                    description: "Mitigations",
+                    additionalInformation: "SAPUI5.Component=ns.mitigations",
+                    applicationType: "URL",
+                    url: "./mitigations/webapp",
+                    navigationMode: "embedded"
+                }
+            }
+        };
+    </script>
 </head>
 <body class="sapUiBody sapUiSizeCompact" id="content">
     <div
